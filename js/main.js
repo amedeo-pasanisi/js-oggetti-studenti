@@ -19,11 +19,11 @@ for (let key in classe) {
 
 // creo un'array "studenti" in cui pusherò gli oggetti con il nome, il cognome e gli anni dello studente
 let studenti = [];
-for (let i = 0; i < studenti.nomi.length; i++) {
+for (let i = 0; i < classe.nomi.length; i++) {
     studenti.push({
-        "nome" : studenti.nomi[i],
-        "cognome" : studenti.cognomi[i],
-        "anni" : studenti.eta[i]
+        "nome" : classe.nomi[i],
+        "cognome" : classe.cognomi[i],
+        "anni" : classe.eta[i]
     });
     // per ogni oggetto pushato visualizzo il numero dello studente, nome, cognome ed anni
     console.log("STUDENTE " + (i + 1));
@@ -51,7 +51,7 @@ btn_nuovo_studente.addEventListener("click",
         studenti.push(nuovoStudente);
 
         // visualizzo il numero dello studente pushato, nome, cognome ed anni
-        console.log("STUDENTE " + classe.length + " (NUOVO)");
+        console.log("STUDENTE " + studenti.length + " (NUOVO)");
         for (let key in nuovoStudente) {
             console.log(key + ": " + nuovoStudente[key]);
         }
